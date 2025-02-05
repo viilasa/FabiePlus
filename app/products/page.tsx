@@ -7,12 +7,17 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { cn } from '@/lib/utils';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const products = {
   powder: [
     {
       name: 'Power Clean Detergent Powder',
-      image: 'https://i.ibb.co/GvCp1CnN/5.jpg',
+      images: [
+        'https://i.ibb.co/GvCp1CnN/5.jpg',
+        'https://i.ibb.co/sddV6vJ9/10.png',
+        'https://i.ibb.co/zhMxjJpC/3a.jpg'
+      ],
       description: 'Deep cleaning formula for all fabric types',
       weight: '2.5kg',
       features: ['Removes tough stains', 'Color protection', 'Fresh scent'],
@@ -45,7 +50,11 @@ const products = {
   liquid: [
     {
       name: 'Ultra Clean Liquid Detergent',
-      image: 'https://i.ibb.co/twV9SGMc/26.jpg',
+      images: [
+        'https://i.ibb.co/twV9SGMc/26.jpg',
+        'https://i.ibb.co/fVBrkwz6/3.png',
+        'https://i.ibb.co/F2bndY4/2.png'
+      ],
       description: 'Advanced formula for machine & hand wash',
       sizes: ['1L', '2L', '4L'],
       features: ['No residue', 'Fresh fragrance', 'Suitable for all machines'],
@@ -78,7 +87,11 @@ const products = {
   cake: [
     {
       name: 'Premium Detergent Cake',
-      image: 'https://i.ibb.co/X1ZVG5x/2.png',
+      images: [
+        'https://i.ibb.co/X1ZVG5x/2.png',
+        'https://i.ibb.co/F2bndY4/2.png',
+        'https://i.ibb.co/fVBrkwz6/3.png'
+      ],
       description: 'Long-lasting fragrance with superior cleaning power',
       weight: '250g',
       features: ['Tough on stains', 'Gentle on hands', 'Fresh scent', 'Economical'],
@@ -111,11 +124,22 @@ const products = {
 };
 
 const ProductCard = ({ product, category }: any) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % product.images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => 
+      prev === 0 ? product.images.length - 1 : prev - 1
+    );
+  };
 
   const handleMouseDown = (e: React.MouseEvent) => {
     setIsDragging(true);
@@ -151,7 +175,7 @@ const ProductCard = ({ product, category }: any) => {
         className="h-full"
       >
         <Card 
-          className="overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col"
+          className="overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col relative"
           ref={cardRef}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={handleMouseLeave}
@@ -162,20 +186,64 @@ const ProductCard = ({ product, category }: any) => {
           onTouchEnd={() => setIsHovered(false)}
         >
           <div className="relative h-[300px] sm:h-[400px] overflow-hidden">
-            <Image
-              src={product.image}
-              alt={product.name}
-              fill
-              className={cn(
-                "object-cover transition-transform duration-500",
-                isHovered && "scale-110"
-              )}
-              unoptimized
-            />
+            <AnimatePresence initial={false} mode="wait">
+              <motion.div
+                key={currentImageIndex}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.3 }}
+                className="absolute inset-0"
+              >
+                <Image
+                  src={product.images[currentImageIndex]}
+                  alt={product.name}
+                  fill
+                  className={cn(
+                    "object-cover transition-transform duration-500",
+                    isHovered && "scale-110"
+                  )}
+                  unoptimized
+                />
+              </motion.div>
+            </AnimatePresence>
+            
+            {isHovered && (
+              <>
+                <button
+                  onClick={prevImage}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 hover:bg-white transition-colors z-10"
+                >
+                  <ChevronLeft className="h-6 w-6" />
+                </button>
+                <button
+                  onClick={nextImage}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 hover:bg-white transition-colors z-10"
+                >
+                  <ChevronRight className="h-6 w-6" />
+                </button>
+              </>
+            )}
+
             <div className={cn(
               "absolute inset-0 bg-gradient-to-b from-transparent to-black/50 opacity-0 transition-opacity duration-300",
               isHovered && "opacity-100"
             )} />
+
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+              {product.images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentImageIndex(index)}
+                  className={cn(
+                    "w-2 h-2 rounded-full transition-all",
+                    currentImageIndex === index 
+                      ? "bg-white w-4" 
+                      : "bg-white/50"
+                  )}
+                />
+              ))}
+            </div>
           </div>
           <CardHeader className="flex-grow">
             <CardTitle className="text-xl font-semibold text-blue-900">{product.name}</CardTitle>
