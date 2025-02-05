@@ -10,7 +10,7 @@ import Image from 'next/image';
 
 const slides = [
   {
-    image: 'https://i.ibb.co/zhMxjJpC/3a.jpg',
+    image: '/3a.jpg',
     title: 'Elevating Cleaning Standards',
     description: 'Your trusted partner in premium cleaning solutions',
   },
