@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-24">
+    <section id="about" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -15,25 +15,25 @@ export function AboutSection() {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <h2 className="text-3xl font-bold text-gray-900">Our Story</h2>
+            <h2 className="text-3xl font-bold text-gray-900">About SkyGlow Trading</h2>
             <p className="text-lg text-gray-600">
-              Founded in 2010, Fabie Plus emerged from a simple yet powerful idea: that clean clothes shouldn't come at the expense of our planet. We've dedicated ourselves to creating eco-friendly cleaning solutions that deliver exceptional results while protecting the environment.
+              Founded with a vision to revolutionize the cleaning products distribution industry in Dubai, SkyGlow Trading has established itself as a reliable partner for quality cleaning solutions.
             </p>
             <p className="text-lg text-gray-600">
-              Our commitment to sustainability drives everything we do, from our biodegradable formulas to our recyclable packaging. We believe in transparency, innovation, and the power of conscious consumption to create positive change.
+              We take pride in our flagship product line, Fabie Plus, which represents our commitment to delivering premium quality detergents that meet the diverse needs of our customers.
             </p>
             <div className="flex items-center space-x-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600">10+</div>
+                <div className="text-3xl font-bold text-blue-600">5+</div>
                 <div className="text-sm text-gray-600">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600">1M+</div>
+                <div className="text-3xl font-bold text-blue-600">1000+</div>
                 <div className="text-sm text-gray-600">Happy Customers</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-600">100%</div>
-                <div className="text-sm text-gray-600">Eco-Friendly</div>
+                <div className="text-sm text-gray-600">Quality Assured</div>
               </div>
             </div>
           </motion.div>
@@ -46,8 +46,8 @@ export function AboutSection() {
             className="relative h-[500px] rounded-lg overflow-hidden"
           >
             <Image
-              src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60"
-              alt="Eco-friendly manufacturing facility"
+              src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf"
+              alt="SkyGlow Trading Facility"
               fill
               className="object-cover"
             />

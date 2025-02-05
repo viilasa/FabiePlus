@@ -6,15 +6,19 @@ import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { Toaster } from '@/components/ui/toaster';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
-  title: 'Fabie Plus Detergent - Eco-Friendly Stain Removal',
-  description: 'Experience superior cleaning power with our eco-friendly detergent that cares for your clothes and the environment.',
+  title: 'SkyGlow Trading - Premium Detergent Distribution',
+  description: 'SkyGlow Trading - Your trusted distributor of premium cleaning products in Dubai, featuring the innovative Fabie Plus detergent line.',
   openGraph: {
-    title: 'Fabie Plus Detergent - Eco-Friendly Stain Removal',
-    description: 'Experience superior cleaning power with our eco-friendly detergent that cares for your clothes and the environment.',
-    images: ['https://images.unsplash.com/photo-1582735689369-4fe89db7114c'],
+    title: 'SkyGlow Trading - Premium Detergent Distribution',
+    description: 'Your trusted distributor of premium cleaning products in Dubai, featuring the innovative Fabie Plus detergent line.',
+    images: ['https://i.ibb.co/8nczs4hw/lOGO.png'],
   },
 };
 
@@ -25,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${inter.variable} font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light">
           <Navbar />
           <main className="min-h-screen">{children}</main>

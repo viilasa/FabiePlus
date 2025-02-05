@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Droplets, Facebook, Twitter, Instagram, Mail, Phone, Clock, MapPin } from 'lucide-react';
+import { Building, Facebook, Twitter, Instagram, Mail, Phone, Clock, MapPin } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 
@@ -10,41 +10,35 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
-              <Droplets className="h-8 w-8 text-blue-600" />
-              <span className="font-bold text-xl">Fabie Plus</span>
+              <Building className="h-8 w-8 text-blue-600" />
+              <span className="font-bold text-xl">SkyGlow Trading</span>
             </Link>
             <p className="text-gray-600">
-              Eco-friendly cleaning solutions for a brighter tomorrow.
+              Your trusted partner in premium cleaning product distribution.
             </p>
           </div>
 
           <div>
             <h3 className="font-semibold text-gray-900 mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {['About', 'Products', 'Testimonials', 'Contact'].map((item) => (
-                <li key={item}>
-                  <Link
-                    href={`#${item.toLowerCase()}`}
-                    className="text-gray-600 hover:text-blue-600 transition-colors"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
               <li>
-                <Link
-                  href="/terms"
-                  className="text-gray-600 hover:text-blue-600 transition-colors"
-                >
-                  Terms & Conditions
+                <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors">
+                  Home
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/privacy"
-                  className="text-gray-600 hover:text-blue-600 transition-colors"
-                >
-                  Privacy Policy
+                <Link href="#about" className="text-gray-600 hover:text-blue-600 transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/products" className="text-gray-600 hover:text-blue-600 transition-colors">
+                  Our Products
+                </Link>
+              </li>
+              <li>
+                <Link href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors">
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -80,7 +74,7 @@ export function Footer() {
             <h3 className="font-semibold text-gray-900 mb-4">Newsletter</h3>
             <div className="space-y-4">
               <p className="text-gray-600">
-                Subscribe to get updates on new products and special offers.
+                Stay updated with our latest products and announcements.
               </p>
               <div className="flex space-x-2">
                 <Input
@@ -88,7 +82,7 @@ export function Footer() {
                   placeholder="Enter your email"
                   className="flex-grow"
                 />
-                <Button>Subscribe</Button>
+                <Button className="bg-blue-600 hover:bg-blue-700">Subscribe</Button>
               </div>
               <div className="flex space-x-4">
                 <Link href="#" className="text-gray-600 hover:text-blue-600">
@@ -110,9 +104,7 @@ export function Footer() {
 
         <div className="mt-8 pt-8 border-t border-gray-200">
           <p className="text-center text-gray-600">
-            © {new Date().getFullYear()} Fabie Plus Detergent. All rights reserved. |{' '}
-            <Link href="/terms" className="hover:text-blue-600">Terms & Conditions</Link> |{' '}
-            <Link href="/privacy" className="hover:text-blue-600">Privacy Policy</Link>
+            © {new Date().getFullYear()} SkyGlow Trading. All rights reserved.
           </p>
         </div>
       </div>
