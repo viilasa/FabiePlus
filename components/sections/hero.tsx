@@ -29,8 +29,9 @@ const slides = [
 export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 9000, stopOnInteraction: true }),
+    Autoplay({ delay: 9000, stopOnInteraction: true }) as unknown as any,
   ]);
+  
 
   useEffect(() => {
     if (emblaApi) {
