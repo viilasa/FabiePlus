@@ -10,7 +10,7 @@ import Image from 'next/image';
 
 const slides = [
   {
-    image: '/3a.jpg',
+    image: 'https://i.ibb.co/zhMxjJpC/3a.jpg',
     title: 'Elevating Cleaning Standards',
     description: 'Your trusted partner in premium cleaning solutions',
   },
@@ -29,7 +29,7 @@ const slides = [
 export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 9000, stopOnInteraction: true }) 
+    Autoplay({ delay: 9000, stopOnInteraction: true }) as unknown as any,
   ]);
   
 
