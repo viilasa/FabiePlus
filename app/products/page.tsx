@@ -231,7 +231,7 @@ const ProductCard = ({ product, category }: any) => {
             )} />
 
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-              {product.images.map((_: string, index: number) => (
+              {product.images.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentImageIndex(index)}
