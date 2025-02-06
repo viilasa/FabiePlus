@@ -12,7 +12,7 @@ import Link from 'next/link';
 const slides = [
   {
     image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738832509/Hero_1_kafy3w.svg',
-    title: 'Elevating Cleaning Standards',
+    title: 'General Trading Distributor',
     description: 'Your trusted partner in premium cleaning solutions',
   },
   {
