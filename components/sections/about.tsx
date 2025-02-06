@@ -17,7 +17,7 @@ export function AboutSection() {
           >
             <h2 className="text-3xl font-bold text-gray-900">About SkyGlow Trading</h2>
             <p className="text-lg text-gray-600">
-              Founded with a vision to revolutionize the cleaning products distribution industry in Dubai, SkyGlow Trading has established itself as a reliable partner for quality cleaning solutions.
+              Founded with a vision to revolutionize the distribution industry in Dubai, SkyGlow Trading has established itself as a reliable partner for quality solutions.
             </p>
             <p className="text-lg text-gray-600">
               We take pride in our flagship product line, Fabie Plus, which represents our commitment to delivering premium quality detergents that meet the diverse needs of our customers.
@@ -28,7 +28,7 @@ export function AboutSection() {
                 <div className="text-sm text-gray-600">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600">1000+</div>
+                <div className="text-3xl font-bold text-blue-600">500+</div>
                 <div className="text-sm text-gray-600">Happy Customers</div>
               </div>
               <div className="text-center">
