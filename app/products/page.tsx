@@ -32,7 +32,7 @@ const products = {
           'Economical packaging'
         ],
         specifications: {
-          sizes: ['500g', '1kg', '2.5kg', '5kg'],
+          sizes: ['500g', '1kg', '2.5kg'],
           usage: 'One scoop per regular load',
           fabricTypes: 'All fabric types including delicates',
           scent: 'Ocean Breeze',
@@ -56,7 +56,7 @@ const products = {
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738837862/3124_1_dkhcc5.svg'
       ],
       description: 'Advanced formula for machine & hand wash',
-      sizes: ['1L', '2L', '4L'],
+      sizes: ['1L', '2L'],
       features: ['No residue', 'Fresh fragrance', 'Suitable for all machines'],
       details: {
         description: 'Experience the power of cleaning with new Fabie Plus Liquid Detergent ough on stains, gentle on fabrics! Specially formulated to penetrate deep into fibers, it lifts away dirt and grime, leaving clothes fresh, bright, and soft. With every wash, enjoy a fresh fragrance, delicate yet enduring, lingers long after the wash, wrapping your garments in a serene embrace.',
