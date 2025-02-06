@@ -10,17 +10,17 @@ import Image from 'next/image';
 
 const slides = [
   {
-    image: 'https://i.ibb.co/zhMxjJpC/3a.jpg',
+    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738832509/Hero_1_kafy3w.svg',
     title: 'Elevating Cleaning Standards',
     description: 'Your trusted partner in premium cleaning solutions',
   },
   {
-    image: 'https://images.unsplash.com/photo-1528740561666-dc2479dc08ab',
+    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738830085/513_lfglms.png',
     title: 'Premium Quality Products',
     description: 'Distributing the finest cleaning solutions across Dubai',
   },
   {
-    image: 'https://images.unsplash.com/photo-1616401784845-180882ba9ba8',
+    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738832235/Hero_c2waqc.svg',
     title: 'Trusted by Leading Businesses',
     description: 'Building lasting partnerships through quality and reliability',
   },

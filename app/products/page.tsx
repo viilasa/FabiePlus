@@ -14,9 +14,9 @@ const products = {
     {
       name: 'Power Clean Detergent Powder',
       images: [
-        'https://i.ibb.co/GvCp1CnN/5.jpg',
-        'https://i.ibb.co/sddV6vJ9/10.png',
-        'https://i.ibb.co/zhMxjJpC/3a.jpg'
+        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738834727/cardd_ynadsu.svg',
+        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738836444/Products_yg1r0w.svg',
+        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738836823/3124_blonal.svg'
       ],
       description: 'Deep cleaning formula for all fabric types',
       weight: '2.5kg',
@@ -51,9 +51,9 @@ const products = {
     {
       name: 'Ultra Clean Liquid Detergent',
       images: [
-        'https://i.ibb.co/twV9SGMc/26.jpg',
-        'https://i.ibb.co/fVBrkwz6/3.png',
-        'https://i.ibb.co/F2bndY4/2.png'
+        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738837596/3124_ylfaor.svg',
+        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738837100/3124_1_vintfu.svg',
+        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738837862/3124_1_dkhcc5.svg'
       ],
       description: 'Advanced formula for machine & hand wash',
       sizes: ['1L', '2L', '4L'],
@@ -88,9 +88,9 @@ const products = {
     {
       name: 'Premium Detergent Cake',
       images: [
-        'https://i.ibb.co/X1ZVG5x/2.png',
-        'https://i.ibb.co/F2bndY4/2.png',
-        'https://i.ibb.co/fVBrkwz6/3.png'
+        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738835566/Products_f49d0p.svg',
+        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738838079/3124_2_losfc9.svg',
+        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738838425/3124_3_spo3gu.svg'
       ],
       description: 'Long-lasting fragrance with superior cleaning power',
       weight: '250g',
@@ -394,7 +394,7 @@ export default function ProductsPage() {
           className="relative w-full h-[300px] mb-16 rounded-2xl overflow-hidden"
         >
           <Image
-            src="https://i.ibb.co/zhMxjJpC/3a.jpg"
+            src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1738832509/Hero_1_kafy3w.svg"
             alt="Fabie Plus Brand"
             fill
             className="object-cover"

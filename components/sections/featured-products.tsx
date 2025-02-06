@@ -12,17 +12,17 @@ import { cn } from '@/lib/utils';
 const featuredProducts = [
   {
     name: 'Premium Powder Detergent',
-    image: 'https://i.ibb.co/sddV6vJ9/10.png',
+    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738835050/Product_q8gnfg.svg',
     description: 'Advanced formula for deep cleaning',
   },
   {
     name: 'Liquid Detergent',
-    image: 'https://i.ibb.co/fVBrkwz6/3.png',
+    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738835400/Products_vt6qao.svg',
     description: 'Perfect for machine & hand wash',
   },
   {
     name: 'Detergent Cake',
-    image: 'https://i.ibb.co/F2bndY4/2.png',
+    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738835566/Products_f49d0p.svg',
     description: 'Long-lasting with superior cleaning power',
   },
 ];
