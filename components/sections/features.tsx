@@ -16,7 +16,7 @@ const features = [
     title: 'Quality Assurance',
     description: 'Every product in our portfolio undergoes rigorous quality checks to ensure consistent performance.',
     icon: Shield,
-    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738834245/Untitled_design_g0gljf.svg',
+    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738851702/CARD_zjed9l.svg',
   },
   {
     title: 'Reliable Distribution',
