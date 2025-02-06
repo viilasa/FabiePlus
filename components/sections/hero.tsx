@@ -7,6 +7,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const slides = [
   {
@@ -111,9 +112,13 @@ export function HeroSection() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.6 }}
                     >
+                     <Link href="/products">
                       <Button size="lg" className="text-lg bg-blue-600 hover:bg-blue-700 text-white">
                         Our Products
                       </Button>
+
+                      </Link>
+
                     </motion.div>
                   </motion.div>
                 </div>
