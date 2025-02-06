@@ -59,7 +59,7 @@ const products = {
       sizes: ['1L', '2L', '4L'],
       features: ['No residue', 'Fresh fragrance', 'Suitable for all machines'],
       details: {
-        description: 'A concentrated liquid detergent that dissolves quickly in water to penetrate deep into fabrics for thorough cleaning while maintaining fabric softness.',
+        description: 'Experience the power of cleaning with new Fabie Plus Liquid Detergent ough on stains, gentle on fabrics! Specially formulated to penetrate deep into fibers, it lifts away dirt and grime, leaving clothes fresh, bright, and soft. With every wash, enjoy a fresh fragrance, delicate yet enduring, lingers long after the wash, wrapping your garments in a serene embrace.',
         benefits: [
           'Quick dissolving formula',
           'No residue technology',
