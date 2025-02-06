@@ -290,12 +290,7 @@ const ProductCard = ({ product, category }: any) => {
                 </div>
               </div>
             )}
-            <Button 
-              className="w-full bg-blue-600 hover:bg-blue-700 transition-colors duration-300"
-              onClick={() => window.location.href = '#contact'}
-            >
-              Inquire Now
-            </Button>
+            
           </CardContent>
         </Card>
       </motion.div>
