@@ -18,7 +18,7 @@ const products = {
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738836444/Products_yg1r0w.svg',
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738836823/3124_blonal.svg'
       ],
-      description: 'Deep cleaning formula for all fabric types',
+      description: 'An economical low suds powder detergent with long lasting fragrances, recommended for light soiled and medium soiled fabrics. It is versatile enough for hard or soft water, hot or cold. Highly recommended for both machine and hand washing.',
       weight: '2.5kg',
       features: ['Removes tough stains', 'Color protection', 'Fresh scent'],
       details: {
@@ -55,11 +55,11 @@ const products = {
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738837100/3124_1_vintfu.svg',
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738837862/3124_1_dkhcc5.svg'
       ],
-      description: 'Advanced formula for machine & hand wash',
-      sizes: ['1L', '2L'],
+      description: 'An economical low suds liquid detergent. It is versatile enough for hard or soft water, hot or cold. Highly recommended for both front load and top load machine. Available in 1 ltr, 2 ltr and 4 ltr packaging.',
+      sizes: ['1L', '2L', '4L'],
       features: ['No residue', 'Fresh fragrance', 'Suitable for all machines'],
       details: {
-        description: 'Experience the power of cleaning with new Fabie Plus Liquid Detergent ough on stains, gentle on fabrics! Specially formulated to penetrate deep into fibers, it lifts away dirt and grime, leaving clothes fresh, bright, and soft. With every wash, enjoy a fresh fragrance, delicate yet enduring, lingers long after the wash, wrapping your garments in a serene embrace.',
+        description: 'Experience the power of cleaning with new Fabie Plus Liquid Detergent ough on stains, gentle on fabrics! Specially formulated to penetrate deep into fibers, it lifts away dirt and grime, leaving clothes fresh, bright, and soft. With every wash, enjoy a fresh fragrance, delicate yet enduring, lingers long after the wash, wrapping your garments in a serene embrace',
         benefits: [
           'Quick dissolving formula',
           'No residue technology',
@@ -92,8 +92,8 @@ const products = {
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738838079/3124_2_losfc9.svg',
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738838425/3124_3_spo3gu.svg'
       ],
-      description: 'Long-lasting fragrance with superior cleaning power',
-      weight: '250g',
+      description: 'an economical low suds washing bar with long lasting fragrances, recommended for highly soiled fabrics.',
+      weight: '200g',
       features: ['Tough on stains', 'Gentle on hands', 'Fresh scent', 'Economical'],
       details: {
         description: 'Traditional detergent cake enhanced with modern cleaning technology. Perfect for hand washing and pre-treating tough stains.',
@@ -106,7 +106,7 @@ const products = {
           'Cost-effective'
         ],
         specifications: {
-          sizes: ['150g', '250g'],
+          sizes: ['150g', '200g'],
           usage: 'Wet fabric and rub directly',
           fabricTypes: 'Best for cotton and synthetics',
           scent: 'Floral Fresh',
@@ -290,7 +290,7 @@ const ProductCard = ({ product, category }: any) => {
                 </div>
               </div>
             )}
-            
+           
           </CardContent>
         </Card>
       </motion.div>
