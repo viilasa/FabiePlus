@@ -13,12 +13,12 @@ const slides = [
   {
     image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738832509/Hero_1_kafy3w.svg',
     title: 'General Trading Distributor',
-    description: 'Your trusted partner in premium Products',
+    description: 'Your trusted partner in premium cleaning solutions',
   },
   {
     image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738830085/513_lfglms.png',
-    title: 'Trusted Quality – Fabie Plus, Distributed by SkyGlow Trading.',
-    description: 'Distributing the finest cleaning solutions across Dubai',
+    title: 'Trusted Quality – Fabie Plus, Distributed by SkyGlow Trading',
+    description: 'Distributing the finest Products across Dubai',
   },
   {
     image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738927423/Hero_chbzyx.svg',
@@ -112,13 +112,14 @@ export function HeroSection() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.6 }}
                     >
-                     <Link href="/products">
+                      <Link href="/products">
                       <Button size="lg" className="text-lg bg-blue-600 hover:bg-blue-700 text-white">
                         Our Products
                       </Button>
 
                       </Link>
 
+                      
                     </motion.div>
                   </motion.div>
                 </div>

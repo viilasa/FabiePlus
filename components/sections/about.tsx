@@ -17,14 +17,16 @@ export function AboutSection() {
           >
             <h2 className="text-3xl font-bold text-gray-900">About SkyGlow Trading</h2>
             <p className="text-lg text-gray-600">
-              Founded with a vision to revolutionize the distribution industry in Dubai, SkyGlow Trading has established itself as a reliable partner for quality solutions.
+            SkyGlow is set to become the leading FMCG Sales and Distribution company in the UAE. Our success is driven by a customer-centric approach, in-depth market research, and a commitment to excellence. With expert teams in Sales, Marketing, Logistics, and Management, we ensure top-tier service and continuous innovation.
             </p>
             <p className="text-lg text-gray-600">
-              We take pride in our flagship product line, Fabie Plus, which represents our commitment to delivering premium quality detergents that meet the diverse needs of our customers.
+            Utilizing advanced systems like SAP, Hand-held Terminals, and GPRS, we streamline supply chain operations for efficiency. Our extensive distribution network covers Hypermarkets, Supermarkets, Self-Service stores, Groceries, Wholesales, and HORECA, ensuring timely deliveries and seamless operations.
+
+
             </p>
             <div className="flex items-center space-x-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600">5+</div>
+                <div className="text-3xl font-bold text-blue-600">3+</div>
                 <div className="text-sm text-gray-600">Years Experience</div>
               </div>
               <div className="text-center">
@@ -46,7 +48,7 @@ export function AboutSection() {
             className="relative h-[500px] rounded-lg overflow-hidden"
           >
             <Image
-              src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf"
+              src="https://bsmedia.business-standard.com/_media/bs/img/article/2024-10/21/full/1729486826-6805.jpg"
               alt="SkyGlow Trading Facility"
               fill
               className="object-cover"

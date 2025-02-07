@@ -35,7 +35,7 @@ export function FeaturesSection() {
             Why Choose SkyGlow Trading?
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Your trusted partner in premium product distribution
+            Your trusted partner in premium cleaning product distribution
           </p>
         </div>
 

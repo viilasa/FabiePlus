@@ -76,7 +76,8 @@ export function ContactSection() {
                 <div className="space-y-2">
                   <p className="text-gray-600 flex items-center gap-2">
                     <Phone className="h-4 w-4" />
-                    Phone & WhatsApp: +971-502915676
+                    Phone & WhatsApp: +971 55 790 6845  <br />    +971 50 733 4611
+                    
                   </p>
                   <p className="text-gray-600 flex items-center gap-2">
                     <Mail className="h-4 w-4" />
