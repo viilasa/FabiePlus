@@ -21,7 +21,7 @@ const slides = [
     description: 'Distributing the finest cleaning solutions across Dubai',
   },
   {
-    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738832235/Hero_c2waqc.svg',
+    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738848341/Hero_apy2kf.png',
     title: 'Trusted by Leading Businesses',
     description: 'Building lasting partnerships through quality and reliability',
   },
