@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -12,13 +12,17 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const products = {
   powder: [
     {
-      name: 'Power Clean Detergent Powder',
+      name: ['Power Clean Detergent Powder',  'Power Clean Detergent Powder'],
       images: [
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738834727/cardd_ynadsu.svg',
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738836444/Products_yg1r0w.svg',
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738836823/3124_blonal.svg'
       ],
-      description: 'An economical low suds powder detergent with long lasting fragrances, recommended for light soiled and medium soiled fabrics. It is versatile enough for hard or soft water, hot or cold. Highly recommended for both machine and hand washing.',
+      descriptions: [
+        'An economical low suds powder detergent with long lasting fragrances, recommended for light soiled and medium soiled fabrics. It is versatile enough for hard or soft water, hot or cold. Highly recommended for both machine and hand washing.',
+        'Advanced stain-fighting technology for the toughest challenges.',
+        'Gentle yet effective cleaning for all your laundry needs.'
+      ],
       weight: '2.5kg',
       features: ['Removes tough stains', 'Color protection', 'Fresh scent'],
       details: {
@@ -32,7 +36,7 @@ const products = {
           'Economical packaging'
         ],
         specifications: {
-          sizes: ['500g', '1kg', '2.5kg'],
+          sizes: ['2.5kg'],
           usage: 'One scoop per regular load',
           fabricTypes: 'All fabric types including delicates',
           scent: 'Ocean Breeze',
@@ -49,17 +53,25 @@ const products = {
   ],
   liquid: [
     {
-      name: 'Ultra Clean Liquid Detergent',
+      name: [
+        'Splash Liquid Detergent',
+        'Fresh Liquid Detergent',
+        'Power Liquid Detergent'
+      ],
       images: [
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738837596/3124_ylfaor.svg',
-        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738837100/3124_1_vintfu.svg',
-        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738837862/3124_1_dkhcc5.svg'
+        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738928287/Fresh_e4wdtr.svg',
+        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738928281/Power_umyhfn.svg'
       ],
-      description: 'An economical low suds liquid detergent. It is versatile enough for hard or soft water, hot or cold. Highly recommended for both front load and top load machine. Available in 1 ltr, 2 ltr and 4 ltr packaging.',
-      sizes: ['1L', '2L', '4L'],
+      descriptions: [
+        'Experience premium liquid cleaning power for your delicates. Splash Experience the power of cleaning with new Fabie Plus Liquid Detergent. Tough on stains, gentle on fabrics!',
+        'An economical low suds liquid detergent. It is versatile enough for hard or soft water, hot or cold. Highly recommended for both front load and top load machine.',
+        'Powerful cleaning action for stubborn stains. Power'
+      ],
+      sizes: ['2L'],
       features: ['No residue', 'Fresh fragrance', 'Suitable for all machines'],
       details: {
-        description: 'Experience the power of cleaning with new Fabie Plus Liquid Detergent ough on stains, gentle on fabrics! Specially formulated to penetrate deep into fibers, it lifts away dirt and grime, leaving clothes fresh, bright, and soft. With every wash, enjoy a fresh fragrance, delicate yet enduring, lingers long after the wash, wrapping your garments in a serene embrace',
+        description: 'Experience the power of cleaning with new Fabie Plus Liquid Detergent. Tough on stains, gentle on fabrics!',
         benefits: [
           'Quick dissolving formula',
           'No residue technology',
@@ -69,10 +81,10 @@ const products = {
           'Machine & hand wash compatible'
         ],
         specifications: {
-          sizes: ['1L', '2L', '4L'],
+          sizes: ['2L'],
           usage: '30ml per regular load',
           fabricTypes: 'All washable fabrics',
-          scent: 'Spring Fresh',
+          scent: ['Fresh', 'Power', 'Splash'],
           packaging: 'Easy-pour bottle with measuring cap'
         },
         instructions: [
@@ -86,13 +98,17 @@ const products = {
   ],
   cake: [
     {
-      name: 'Premium Detergent Cake',
+      name: ['Premium Detergent Cake','Premium Detergent Cake'],
       images: [
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738835566/Products_f49d0p.svg',
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738838079/3124_2_losfc9.svg',
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738838425/3124_3_spo3gu.svg'
       ],
-      description: 'an economical low suds washing bar with long lasting fragrances, recommended for highly soiled fabrics.',
+      descriptions: [
+        'Traditional cleaning power meets modern technology.',
+        'Perfect for targeted stain removal and pre-treatment.',
+        'Economical and effective for daily use.'
+      ],
       weight: '200g',
       features: ['Tough on stains', 'Gentle on hands', 'Fresh scent', 'Economical'],
       details: {
@@ -109,7 +125,7 @@ const products = {
           sizes: ['150g', '200g'],
           usage: 'Wet fabric and rub directly',
           fabricTypes: 'Best for cotton and synthetics',
-          scent: 'Floral Fresh',
+          scent: ['Floral Fresh', 'Lemon Zest', 'Ocean Breeze'],
           packaging: 'Individual wrap'
         },
         instructions: [
@@ -125,14 +141,21 @@ const products = {
 
 const ProductCard = ({ product, category }: any) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
+  const autoplayRef = useRef<NodeJS.Timeout | null>(null);
+  const titleAutoplayRef = useRef<NodeJS.Timeout | null>(null);
   const cardRef = useRef<HTMLDivElement>(null);
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % product.images.length);
+  };
+
+  const nextTitle = () => {
+    setCurrentTitleIndex((prev) => (prev + 1) % product.name.length);
   };
 
   const prevImage = () => {
@@ -140,6 +163,36 @@ const ProductCard = ({ product, category }: any) => {
       prev === 0 ? product.images.length - 1 : prev - 1
     );
   };
+
+  useEffect(() => {
+    // Start image autoplay
+    const startImageAutoplay = () => {
+      autoplayRef.current = setInterval(() => {
+        nextImage();
+      }, 3000); // Change image every 3 seconds
+    };
+
+    // Start title autoplay
+    const startTitleAutoplay = () => {
+      titleAutoplayRef.current = setInterval(() => {
+        nextTitle();
+      }, 3000); // Change title every 3 seconds
+    };
+
+    if (!isHovered) {
+      startImageAutoplay();
+      startTitleAutoplay();
+    }
+
+    return () => {
+      if (autoplayRef.current) {
+        clearInterval(autoplayRef.current);
+      }
+      if (titleAutoplayRef.current) {
+        clearInterval(titleAutoplayRef.current);
+      }
+    };
+  }, [isHovered]);
 
   const handleMouseDown = (e: React.MouseEvent) => {
     setIsDragging(true);
@@ -245,10 +298,28 @@ const ProductCard = ({ product, category }: any) => {
               ))}
             </div>
           </div>
-          <CardHeader className="flex-grow">
-            <CardTitle className="text-xl font-semibold text-blue-900">{product.name}</CardTitle>
-            <CardDescription className="text-gray-600">{product.description}</CardDescription>
-          </CardHeader>
+          
+          <CardContent className="flex-grow" >
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentTitleIndex}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.3 }}
+                className="mt-4"
+              >
+                <CardTitle className="text-xl font-semibold text-blue-900  ">
+                  {product.name[currentTitleIndex]}
+                </CardTitle>
+              </motion.div>
+            </AnimatePresence>
+            <CardDescription className="text-gray-600">
+              {product.descriptions[currentImageIndex]}
+            </CardDescription>
+          </CardContent>
+
+         
           <CardContent className="space-y-4">
             <AnimatePresence>
               {product.features && (
@@ -327,156 +398,171 @@ const ProductCard = ({ product, category }: any) => {
                 <div className="flex flex-wrap gap-2">
                   {product.details.specifications.sizes.map((size: string) => (
                     <span key={size} className="px-3 py-1 text-sm bg-blue-50 text-blue-700 rounded-full">
-                      {size}
+                    {size}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h4 className="font-medium text-gray-900 mb-2">Usage</h4>
+              <p className="text-gray-600">{product.details.specifications.usage}</p>
+            </div>
+            <div>
+              <h4 className="font-medium text-gray-900 mb-2">Suitable For</h4>
+              <p className="text-gray-600">{product.details.specifications.fabricTypes}</p>
+            </div>
+            <div>
+              <h4 className="font-medium text-gray-900 mb-2">Available Scents</h4>
+              <div className="flex flex-col space-y-2">
+                {Array.isArray(product.details.specifications.scent) ? (
+                  product.details.specifications.scent.map((scent: string) => (
+                    <span
+                      key={scent}
+                      className="px-3 py-1 text-sm bg-blue-40 text-blue-700 rounded-full inline-block"
+                    >
+                      {scent}
                     </span>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h4 className="font-medium text-gray-900 mb-2">Usage</h4>
-                <p className="text-gray-600">{product.details.specifications.usage}</p>
-              </div>
-              <div>
-                <h4 className="font-medium text-gray-900 mb-2">Suitable For</h4>
-                <p className="text-gray-600">{product.details.specifications.fabricTypes}</p>
-              </div>
-              <div>
-                <h4 className="font-medium text-gray-900 mb-2">Fragrance</h4>
-                <p className="text-gray-600">{product.details.specifications.scent}</p>
+                  ))
+                ) : (
+                  <span className="px-3 py-1 text-sm bg-blue-50 text-blue-700 rounded-full inline-block">
+                    {product.details.specifications.scent}
+                  </span>
+                )}
               </div>
             </div>
           </div>
-
-          <div>
-            <h3 className="text-xl font-semibold text-blue-900 mb-3">Usage Instructions</h3>
-            <ul className="space-y-2">
-              {product.details.instructions.map((instruction: string) => (
-                <li key={instruction} className="flex items-center space-x-3 text-gray-600">
-                  <span className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
-                  <span>{instruction}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
-      </motion.div>
-    </div>
-  );
+
+        <div>
+          <h3 className="text-xl font-semibold text-blue-900 mb-3">Usage Instructions</h3>
+          <ul className="space-y-2">
+            {product.details.instructions.map((instruction: string) => (
+              <li key={instruction} className="flex items-center space-x-3 text-gray-600">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
+                <span>{instruction}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </motion.div>
+  </div>
+);
 };
 
 export default function ProductsPage() {
-  const [activeTab, setActiveTab] = useState('powder');
+const [activeTab, setActiveTab] = useState('powder');
 
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-blue-50 pt-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-4xl font-bold text-blue-900 mb-4">Our Products</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Discover our range of premium detergents designed for superior cleaning performance
-          </p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="relative w-full h-[300px] mb-16 rounded-2xl overflow-hidden"
-        >
-          <Image
-            src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1738832509/Hero_1_kafy3w.svg"
-            alt="Fabie Plus Brand"
-            fill
-            className="object-cover"
-            unoptimized
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-transparent">
-            <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className="max-w-lg"
-              >
-                <h2 className="text-4xl font-bold text-white mb-4">
-                  Fabie Plus
-                </h2>
-                <p className="text-xl text-blue-100">
-                  Experience the power of premium cleaning with our innovative detergent line, 
-                  crafted for excellence and environmental consciousness.
-                </p>
-              </motion.div>
-            </div>
-          </div>
-        </motion.div>
-
-        <Tabs 
-          defaultValue="powder" 
-          className="space-y-8"
-          value={activeTab}
-          onValueChange={setActiveTab}
-        >
-          <TabsList className="w-full justify-center bg-white/50 backdrop-blur-sm p-1 rounded-full">
-            <TabsTrigger 
-              value="powder"
-              className="data-[state=active]:bg-blue-600 data-[state=active]:text-white"
-            >
-              Detergent Powder
-            </TabsTrigger>
-            <TabsTrigger 
-              value="liquid"
-              className="data-[state=active]:bg-blue-600 data-[state=active]:text-white"
-            >
-              Liquid Detergent
-            </TabsTrigger>
-            <TabsTrigger 
-              value="cake"
-              className="data-[state=active]:bg-blue-600 data-[state=active]:text-white"
-            >
-              Detergent Cake
-            </TabsTrigger>
-          </TabsList>
-
-          {Object.entries(products).map(([category, items]) => (
-            <TabsContent key={category} value={category}>
-              {items.map((product, index) => (
-                <ProductCard
-                  key={index}
-                  product={product}
-                  category={category}
-                />
-              ))}
-            </TabsContent>
-          ))}
-        </Tabs>
-      </div>
+return (
+  <div className="min-h-screen bg-gradient-to-b from-white to-blue-50 pt-24">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-center mb-16"
+      >
+        <h1 className="text-4xl font-bold text-blue-900 mb-4">Our Products</h1>
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          Discover our range of premium detergents designed for superior cleaning performance
+        </p>
+      </motion.div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="mt-24 bg-blue-900 text-white py-16"
+        className="relative w-full h-[300px] mb-16 rounded-2xl overflow-hidden"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Need Help Choosing?</h2>
-          <p className="text-lg text-blue-100 mb-8">
-            Our experts are here to help you find the perfect detergent for your needs
-          </p>
-          <Button 
-            variant="outline" 
-            size="lg" 
-            className="bg-white text-blue-900 hover:bg-blue-50 transition-colors duration-300"
-            onClick={() => window.location.href = '#contact'}
-          >
-            Contact Us
-          </Button>
+        <Image
+          src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1738832509/Hero_1_kafy3w.svg"
+          alt="Fabie Plus Brand"
+          fill
+          className="object-cover"
+          unoptimized
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-transparent">
+          <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="max-w-lg"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Fabie Plus
+              </h2>
+              <p className="text-xl text-blue-100">
+                Experience the power of premium cleaning with our innovative detergent line, 
+                crafted for excellence and environmental consciousness.
+              </p>
+            </motion.div>
+          </div>
         </div>
       </motion.div>
+
+      <Tabs 
+        defaultValue="powder" 
+        className="space-y-8"
+        value={activeTab}
+        onValueChange={setActiveTab}
+      >
+        <TabsList className="w-full justify-center bg-white/50 backdrop-blur-sm p-1 rounded-full">
+          <TabsTrigger 
+            value="powder"
+            className="data-[state=active]:bg-blue-600 data-[state=active]:text-white"
+          >
+            Detergent Powder
+          </TabsTrigger>
+          <TabsTrigger 
+            value="liquid"
+            className="data-[state=active]:bg-blue-600 data-[state=active]:text-white"
+          >
+            Liquid Detergent
+          </TabsTrigger>
+          <TabsTrigger 
+            value="cake"
+            className="data-[state=active]:bg-blue-600 data-[state=active]:text-white"
+          >
+            Detergent Cake
+          </TabsTrigger>
+        </TabsList>
+
+        {Object.entries(products).map(([category, items]) => (
+          <TabsContent key={category} value={category}>
+            {items.map((product, index) => (
+              <ProductCard
+                key={index}
+                product={product}
+                category={category}
+              />
+            ))}
+          </TabsContent>
+        ))}
+      </Tabs>
     </div>
-  );
+
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
+      className="mt-24 bg-blue-900 text-white py-16"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-3xl font-bold mb-4">Need Help Choosing?</h2>
+        <p className="text-lg text-blue-100 mb-8">
+          Our experts are here to help you find the perfect detergent for your needs
+        </p>
+        <Button 
+          variant="outline" 
+          size="lg" 
+          className="bg-white text-blue-900 hover:bg-blue-50 transition-colors duration-300"
+          onClick={() => window.location.href = '#contact'}
+        >
+          Contact Us
+        </Button>
+      </div>
+    </motion.div>
+  </div>
+);
 }
