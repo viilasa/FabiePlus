@@ -17,7 +17,7 @@ const slides = [
   },
   {
     image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738830085/513_lfglms.png',
-    title: 'Powerful Cleaning, Trusted Quality – Fabie Plus, Distributed by SkyGlow Trading.',
+    title: 'Trusted Quality – Fabie Plus, Distributed by SkyGlow Trading.',
     description: 'Distributing the finest cleaning solutions across Dubai',
   },
   {
