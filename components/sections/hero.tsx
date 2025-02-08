@@ -16,7 +16,7 @@ const slides = [
     description: 'Your trusted partner in premium cleaning solutions',
   },
   {
-    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738830085/513_lfglms.png',
+    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1739046181/Hero_2_gurkjj.svg',
     title: 'Trusted Quality – Fabie Plus, Distributed by SkyGlow Trading',
     description: 'Distributing the finest Products across Dubai',
   },
