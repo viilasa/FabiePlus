@@ -79,7 +79,7 @@ export function HeroSection() {
                   sizes="100vw"
                   unoptimized
                 />
-                <div className="absolute inset-0 bg-black/30" />
+                <div className="absolute inset-0 bg-black/10" />
               </div>
               
               <div className="relative h-full flex items-center justify-center">
@@ -91,7 +91,7 @@ export function HeroSection() {
                     className="space-y-6"
                   >
                     <motion.h1 
-                      className="text-3xl md:text-6xl font-bold text-white"
+                      className="text-3xl md:text-6xl font-bold text-white drop-shadow-lg"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.2 }}
@@ -99,7 +99,7 @@ export function HeroSection() {
                       {slide.title}
                     </motion.h1>
                     <motion.p 
-                      className="text-lg md:text-2xl text-gray-100 max-w-3xl mx-auto"
+                      className="text-lg md:text-2xl text-gray-100 max-w-3xl mx-auto drop-shadow-lg"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.4 }}
