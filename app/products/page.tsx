@@ -12,7 +12,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const products = {
   powder: [
     {
-      name: ['Power Clean Detergent Powder',  'Power Clean Detergent Powder'],
+      name: ['Ultra Clean Detergent Powder',  'Ultra Clean Detergent Powder'],
       images: [
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738834727/cardd_ynadsu.svg',
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738836444/Products_yg1r0w.svg',
@@ -20,8 +20,8 @@ const products = {
       ],
       descriptions: [
         'An economical low suds powder detergent with long lasting fragrances, recommended for light soiled and medium soiled fabrics. It is versatile enough for hard or soft water, hot or cold. Highly recommended for both machine and hand washing.',
-        'Advanced stain-fighting technology for the toughest challenges.',
-        'Gentle yet effective cleaning for all your laundry needs.'
+        'Our detergent powder is designed for a superior clean, tackling tough stains while keeping fabrics fresh and vibrant. With advanced stain-fighting technology, it dissolves quickly in water, ensuring deep penetration for effective dirt removal. Gentle on clothes yet tough on grime, it leaves every wash with a long-lasting, refreshing fragrance',
+        'Experience the power of next-level cleaning with our advanced detergent powder. Specially formulated for deep stain removal, it features rapid-dissolve technology that works in both hot and cold water, ensuring no residue is left behind. Infused with fabric care agents, it not only cleans but also protects colors and softens fibers, keeping clothes looking new for longer. Plus, with odor-neutralizing properties, it leaves your laundry feeling fresher than ever!'
       ],
       weight: '2.5kg',
       features: ['Removes tough stains', 'Color protection', 'Fresh scent'],
@@ -66,7 +66,7 @@ const products = {
       descriptions: [
         'Experience premium liquid cleaning power for your delicates. Splash Experience the power of cleaning with new Fabie Plus Liquid Detergent. Tough on stains, gentle on fabrics!',
         'An economical low suds liquid detergent. It is versatile enough for hard or soft water, hot or cold. Highly recommended for both front load and top load machine.',
-        'Powerful cleaning action for stubborn stains. Power'
+        ' A premium detergent with long lasting fragrances for all types of cloths. Designed exclusively for full automatic washing machines.'
       ],
       sizes: ['2L'],
       features: ['No residue', 'Fresh fragrance', 'Suitable for all machines'],
@@ -105,9 +105,9 @@ const products = {
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738838425/3124_3_spo3gu.svg'
       ],
       descriptions: [
-        'Traditional cleaning power meets modern technology.',
-        'Perfect for targeted stain removal and pre-treatment.',
-        'Economical and effective for daily use.'
+        'an economical low suds washing bar with long lasting fragrances, recommended for highly soiled fabrics.',
+        'Designed for tough stain removal and effective pre-treatment, our detergent cake delivers a deep and effortless clean every time.',
+        'Our detergent cake is specially formulated for powerful stain removal and effective pre-treatment. With a deep-penetrating formula, it lifts tough stains like grease, ink, and mud while being gentle on fabrics. Long-lasting and easy to use, it ensures a fresh, bright clean with every wash.'
       ],
       weight: '200g',
       features: ['Tough on stains', 'Gentle on hands', 'Fresh scent', 'Economical'],
@@ -424,7 +424,7 @@ const ProductCard = ({ product, category }: any) => {
                     </span>
                   ))
                 ) : (
-                  <span className="px-3 py-1 text-sm bg-blue-50 text-blue-700 rounded-full inline-block">
+                  <span className="px-3 py-1 text-sm bg-blue-40 text-blue-700 rounded-full inline-block">
                     {product.details.specifications.scent}
                   </span>
                 )}
