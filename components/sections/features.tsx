@@ -10,19 +10,19 @@ const features = [
     title: 'Premium Products',
     description: 'We distribute only the highest quality cleaning solutions, starting with our flagship Fabie Plus detergent line.',
     icon: TrendingUp,
-    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738832745/CARD_fpy7tg.svg',
+    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738922176/CARD_1_o1fwug.svg',
   },
   {
     title: 'Quality Assurance',
     description: 'Every product in our portfolio undergoes rigorous quality checks to ensure consistent performance.',
     icon: Shield,
-    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738922176/CARD_1_o1fwug.svg',
+    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1739027492/CARD_2_np45lo.svg',
   },
   {
     title: 'Reliable Distribution',
     description: 'Our efficient distribution network ensures timely delivery across Dubai and surrounding regions.',
     icon: Truck,
-    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738834007/Untitled_design_1_h4wa2q.svg',
+    image: 'https://plus.unsplash.com/premium_photo-1661302828763-4ec9b91d9ce3?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
 ];
 
