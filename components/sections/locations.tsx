@@ -57,7 +57,7 @@ export function LocationsSection() {
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Contact</h4>
-                <p className="text-gray-600">Phone & WhatsApp: +971 55 790 6845 <br /> +971 50 733 4611 </p>
+                <p className="text-gray-600">Phone & WhatsApp: +971 55 790 6845 <br /> +971 50 733 4611 <br /> +971 50 291 5676</p>
                 <p className="text-gray-600">Email: sales@sggeneraltrading.com</p>
               </div>
               <div>
