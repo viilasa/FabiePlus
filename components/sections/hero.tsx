@@ -11,17 +11,17 @@ import Link from 'next/link';
 
 const slides = [
   {
-    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738832509/Hero_1_kafy3w.svg',
+    image: 'https://cdn.pixabay.com/photo/2016/11/22/19/24/archive-1850170_960_720.jpg',
     title: 'General Trading Distributor',
     description: 'Your trusted partner in premium cleaning solutions',
   },
   {
-    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1739046181/Hero_2_gurkjj.svg',
+    image: 'https://cdn.pixabay.com/photo/2015/11/06/11/48/warehouse-1026496_960_720.jpg',
     title: 'Trusted Quality – Fabie Plus, Distributed by SkyGlow Trading',
     description: 'Distributing the finest Products across Dubai',
   },
   {
-    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738927423/Hero_chbzyx.svg',
+    image: 'https://cdn.pixabay.com/photo/2019/03/09/21/30/downtown-4045037_960_720.jpg',
     title: 'Trusted by Leading Businesses',
     description: 'Building lasting partnerships through quality and reliability',
   },
