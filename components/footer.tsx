@@ -55,7 +55,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                +971 55 790 6845 <br /> +971 50 733 4611
+                +971 55 790 6845 <br /> +971 50 733 4611 <br /> +971 50 291 5676
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
