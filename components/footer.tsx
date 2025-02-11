@@ -71,13 +71,13 @@ export function Footer() {
 
         <div className="mt-8 pt-8 border-t border-gray-200">
           <div className="flex justify-center space-x-4 mb-4">
-            <Link href="#" className="text-gray-600 hover:text-blue-600">
+            <Link href="https://www.facebook.com/share/1EENXzrcDi/?mibextid=wwXIfr" className="text-gray-600 hover:text-blue-600">
               <Facebook className="h-5 w-5" />
             </Link>
             <Link href="#" className="text-gray-600 hover:text-blue-600">
               <Twitter className="h-5 w-5" />
             </Link>
-            <Link href="#" className="text-gray-600 hover:text-blue-600">
+            <Link href="https://www.instagram.com/fabie.plus?igsh=MWRxbW96enNsNW5rdQ%3D%3D&utm_source=qr " className="text-gray-600 hover:text-blue-600">
               <Instagram className="h-5 w-5" />
             </Link>
             <Link href="#" className="text-gray-600 hover:text-blue-600">
