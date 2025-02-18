@@ -37,7 +37,7 @@ const customers = [
     font: 'font-sans font-extrabold tracking-widest',
   },
   {
-    name: 'DUBAI and SHARJAH, Ajman',
+    name: 'B and C  class outlets in all over UAE market',
     font: 'font-mono italic font-black uppercase',
   },
 ];
