@@ -37,7 +37,7 @@ const customers = [
     font: 'font-sans font-extrabold tracking-widest',
   },
   {
-    name: 'DUBAI and SHARJAH',
+    name: 'DUBAI and SHARJAH, Ajman',
     font: 'font-mono italic font-black uppercase',
   },
 ];
