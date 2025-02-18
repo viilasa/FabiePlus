@@ -16,15 +16,6 @@ export function ContactSection() {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: 'Message Sent!',
-      description: "Thank you for contacting us. We'll get back to you soon.",
-    });
-    setFormData({ name: '', email: '', message: '' });
-  };
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -76,8 +67,7 @@ export function ContactSection() {
                 <div className="space-y-2">
                   <p className="text-gray-600 flex items-center gap-2">
                     <Phone className="h-4 w-4" />
-                    Phone & WhatsApp: +971 55 790 6845  <br />    +971 50 733 4611 <br /> +971 50 291 5676
-                    
+                    Phone & WhatsApp: +971 55 790 6845  <br /> +971 50 733 4611 <br /> +971 50 291 5676
                   </p>
                   <p className="text-gray-600 flex items-center gap-2">
                     <Mail className="h-4 w-4" />
@@ -94,7 +84,11 @@ export function ContactSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form 
+              action="https://formsubmit.co/sales@sggeneraltrading.com" 
+              method="POST" 
+              className="space-y-6"
+            >
               <div>
                 <Input
                   name="name"
