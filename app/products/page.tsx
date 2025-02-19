@@ -15,7 +15,7 @@ const products = {
       name: ['Ultra Clean Detergent Powder',  'Ultra Clean Detergent Powder'],
       images: [
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738834727/cardd_ynadsu.svg',
-        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1739955799/2_zsrhbs.svg',
+        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1739957512/pixelcut-export_j8bhcs.png',
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1739955784/3_cayioc.svg'
       ],
       descriptions: [
