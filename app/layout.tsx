@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   
   openGraph: {
     title: 'SkyGlow Trading - Premium Product Distribution',
-    description: 'Your trusted distributor of premium cleaning products in Dubai, featuring the innovative Fabie Plus detergent line.',
+    description: 'Your trusted distributor of premium products in Dubai, featuring the innovative Fabie Plus detergent line.',
     images: ['https://res.cloudinary.com/ddhhlkyut/image/upload/v1739956200/Untitled_design_1_ohlec5.svg'],
   },
 };
@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="https://res.cloudinary.com/ddhhlkyut/image/upload/v1739957955/Untitled_design_4_nmqgjq.svg" type="image/svg+xml" />
+        <link rel="icon" href="https://res.cloudinary.com/ddhhlkyut/image/upload/v1739958881/favicon_nhdejw.svg" type="image/svg+xml" />
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light">
