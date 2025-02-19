@@ -15,8 +15,8 @@ const products = {
       name: ['Ultra Clean Detergent Powder',  'Ultra Clean Detergent Powder'],
       images: [
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738834727/cardd_ynadsu.svg',
-        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1739957512/pixelcut-export_j8bhcs.png',
-        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1739955784/3_cayioc.svg'
+        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1739958197/2_xifsyu.svg',
+        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1739958195/3_j1sj4l.svg'
       ],
       descriptions: [
         'An economical low suds powder detergent with long lasting fragrances, recommended for light soiled and medium soiled fabrics. It is versatile enough for hard or soft water, hot or cold. Highly recommended for both machine and hand washing.',
