@@ -12,12 +12,12 @@ import { cn } from '@/lib/utils';
 const featuredProducts = [
   {
     name: 'Premium Powder Detergent',
-    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738835050/Product_q8gnfg.svg',
+    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1739958451/2_hiozph.svg',
     description: 'Advanced formula for deep cleaning',
   },
   {
     name: 'Liquid Detergent',
-    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738835400/Products_vt6qao.svg',
+    image: 'https://res.cloudinary.com/ddhhlkyut/image/upload/v1739959213/LDpink_h5ydno.svg',
     description: 'Perfect for machine & hand wash',
   },
   {
