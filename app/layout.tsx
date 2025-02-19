@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="https://res.cloudinary.com/ddhhlkyut/image/upload/v1739956200/Untitled_design_1_ohlec5.svg" type="image/svg+xml" />
+        <link rel="icon" href="https://res.cloudinary.com/ddhhlkyut/image/upload/v1739957286/Untitled_design_3_c3zomd.svg" type="image/svg+xml" />
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light">
