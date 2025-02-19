@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   title: 'SkyGlow Trading - Premium Detergent Distribution',
   description: 'SkyGlow Trading - Your trusted distributor of premium cleaning products in Dubai, featuring the innovative Fabie Plus detergent line.',
   openGraph: {
-    title: 'SkyGlow Trading - Premium Detergent Distribution',
+    title: 'SkyGlow Trading - Premium Product Distribution',
     description: 'Your trusted distributor of premium cleaning products in Dubai, featuring the innovative Fabie Plus detergent line.',
-    images: ['https://i.ibb.co/8nczs4hw/lOGO.png'],
+    images: ['https://res.cloudinary.com/ddhhlkyut/image/upload/v1739956200/Untitled_design_1_ohlec5.svg'],
   },
 };
 
