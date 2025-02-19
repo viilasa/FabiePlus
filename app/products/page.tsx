@@ -61,7 +61,7 @@ const products = {
       images: [
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738837596/3124_ylfaor.svg',
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738928287/Fresh_e4wdtr.svg',
-        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1739955788/1_xtjxji.svg'
+        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1739958642/Products_1_dawpv9.svg'
       ],
       descriptions: [
         'Experience premium liquid cleaning power for your delicates. Splash Experience the power of cleaning with new Fabie Plus Liquid Detergent. Tough on stains, gentle on fabrics!',
