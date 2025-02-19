@@ -15,8 +15,8 @@ const products = {
       name: ['Ultra Clean Detergent Powder',  'Ultra Clean Detergent Powder'],
       images: [
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738834727/cardd_ynadsu.svg',
-        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1739955110/new2_tfog0a.jpg',
-        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1739955110/new3_njmmto.jpg'
+        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1739955799/2_zsrhbs.svg',
+        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1739955784/3_cayioc.svg'
       ],
       descriptions: [
         'An economical low suds powder detergent with long lasting fragrances, recommended for light soiled and medium soiled fabrics. It is versatile enough for hard or soft water, hot or cold. Highly recommended for both machine and hand washing.',
@@ -61,7 +61,7 @@ const products = {
       images: [
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738837596/3124_ylfaor.svg',
         'https://res.cloudinary.com/ddhhlkyut/image/upload/v1738928287/Fresh_e4wdtr.svg',
-        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1739955110/new1_ookb3u.jpg'
+        'https://res.cloudinary.com/ddhhlkyut/image/upload/v1739955788/1_xtjxji.svg'
       ],
       descriptions: [
         'Experience premium liquid cleaning power for your delicates. Splash Experience the power of cleaning with new Fabie Plus Liquid Detergent. Tough on stains, gentle on fabrics!',
