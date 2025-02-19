@@ -14,8 +14,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'SkyGlow Trading - Premium Products Distribution',
-  description: 'SkyGlow Trading - Your trusted distributor of premium cleaning products in Dubai, featuring the innovative Fabie Plus detergent line.',
-  images: ['https://res.cloudinary.com/ddhhlkyut/image/upload/v1739956200/Untitled_design_1_ohlec5.svg'],
+  description: 'SkyGlow Trading - Your trusted distributor of premium products in Dubai, featuring the innovative Fabie Plus detergent line.',
+  
   openGraph: {
     title: 'SkyGlow Trading - Premium Product Distribution',
     description: 'Your trusted distributor of premium cleaning products in Dubai, featuring the innovative Fabie Plus detergent line.',
